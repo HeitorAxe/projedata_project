@@ -28,6 +28,13 @@ public class Principal {
 
         funcionarios.removeIf(f -> f.getNome().equals("João"));
 
+        System.out.println("Funcionários: ");
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println(funcionario);
+            System.out.println();
+        }
+        System.out.println("==========================================");
+
         FuncionarioUtils.aumentarSalario(funcionarios, 10);
 
         Map<String, List<Funcionario>> funcionariosPorFuncao = FuncionarioUtils.agruparPorFuncao(funcionarios);
